@@ -1,6 +1,6 @@
 <template>
     <card :class="cardStyle">
-        <h2 v-if="card.title" class="font-bold mb-2">{{ card.title }}</h2>
+        <h2 v-if="card.title" class="font-bold mb-2 flex items-center gap-3" v-html="card.title" />
 
         <div v-if="card.height === 'fixed'" :class="fixedStyle">
             <div :class="fixedInnerStyle">
