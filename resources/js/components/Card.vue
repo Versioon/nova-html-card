@@ -23,7 +23,9 @@ export default {
 
     computed: {
         cardStyle() {
-            return this.card.center ? 'flex flex-col items-center justify-center py-4' : 'px-6 py-4';
+            return this.card.center
+                ? 'flex flex-col items-center justify-center py-4 nova-html-card'
+                : 'px-6 py-4 nova-html-card';
         },
         fixedStyle() {
             return this.card.title ? 'min-h-[90px]' : 'min-h-[128px]';
