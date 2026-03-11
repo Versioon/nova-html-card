@@ -51,6 +51,20 @@ export default {
         this.fetch();
     },
 
+    mounted() {
+        if (this.card && this.card.refreshWhenFiltersChange === true) {
+            Nova.$on('filter-changed', this.fetch);
+            Nova.$on('filter-reset', this.fetch);
+        }
+    },
+
+    beforeUnmount() {
+        if (this.card && this.card.refreshWhenFiltersChange === true) {
+            Nova.$off('filter-changed', this.fetch);
+            Nova.$off('filter-reset', this.fetch);
+        }
+    },
+
     methods: {
         handleRangeSelected(key) {
             this.selectedRangeKey = key;
@@ -83,11 +97,22 @@ export default {
                 : 'overflow-hidden overflow-y-auto fixed-html-card max-h-[128px]';
         },
         metricPayload() {
-            return {
+            const payload = {
                 params: {
                     range: this.selectedRangeKey,
                 },
             };
+
+            if (
+                !Nova.missingResource(this.resourceName) &&
+                this.card &&
+                this.card.refreshWhenFiltersChange === true
+            ) {
+                payload.params.filter =
+                    this.$store.getters[`${this.resourceName}/currentEncodedFilters`];
+            }
+
+            return payload;
         },
     },
 };
