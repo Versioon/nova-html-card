@@ -103,6 +103,8 @@ export default {
             const payload = {
                 params: {
                     range: this.selectedRangeKey,
+                    page: this.card.page ?? null,
+                    per_page: this.card.perPage ?? null,
                 },
             };
 
