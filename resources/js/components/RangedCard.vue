@@ -104,7 +104,7 @@ export default {
                 params: {
                     range: this.selectedRangeKey,
                     page: this.card.page ?? null,
-                    per_page: this.card.perPage ?? null,
+                    perPage: this.card.perPage ?? null,
                 },
             };
 
