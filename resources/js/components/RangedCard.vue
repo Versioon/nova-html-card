@@ -1,6 +1,9 @@
 <template>
     <loading-card :class="cardStyle" :loading="loading">
-        <div class="flex border-b border-gray-200 dark:border-gray-700 items-center pb-2">
+        <div
+            v-if="card.title || card.ranges.length > 0"
+            class="flex border-b border-gray-200 dark:border-gray-700 items-center pb-2"
+        >
             <h2 v-if="card.title" class="font-bold flex items-center gap-2" v-html="card.title" />
 
             <SelectControl
@@ -103,13 +106,8 @@ export default {
                 },
             };
 
-            if (
-                !Nova.missingResource(this.resourceName) &&
-                this.card &&
-                this.card.refreshWhenFiltersChange === true
-            ) {
-                payload.params.filter =
-                    this.$store.getters[`${this.resourceName}/currentEncodedFilters`];
+            if (!Nova.missingResource(this.resourceName) && this.card && this.card.refreshWhenFiltersChange === true) {
+                payload.params.filter = this.$store.getters[`${this.resourceName}/currentEncodedFilters`];
             }
 
             return payload;
