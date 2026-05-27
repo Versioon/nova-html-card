@@ -11,6 +11,7 @@ class HtmlRangedCard extends RangedMetric
 {
     public string $title = '';
     public string $content = '';
+    public string $tooltip = '';
 
     public $width = '1/3';
     public $height = 'fixed';
@@ -39,6 +40,13 @@ class HtmlRangedCard extends RangedMetric
         return [];
     }
 
+    public function tooltip(string $text): static
+    {
+        $this->tooltip = $text;
+
+        return $this;
+    }
+
     public function jsonSerialize(): array
     {
         return array_merge([
@@ -46,6 +54,7 @@ class HtmlRangedCard extends RangedMetric
             'content' => $this->content,
             'height' => $this->height,
             'center' => $this->center,
+            'tooltip' => $this->tooltip,
         ], parent::jsonSerialize());
     }
 }
