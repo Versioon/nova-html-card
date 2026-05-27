@@ -4,14 +4,23 @@
 }
 
 .fixed-html-card:hover::-webkit-scrollbar-track {
-    background: #EEF1F4;
+    background: #eef1f4;
 }
 
 .fixed-html-card:hover::-webkit-scrollbar-thumb {
-    background-color: #7C8592;
+    background-color: #7c8592;
     border-radius: 2px;
 }
 
 .max-h-\[128px\] {
-    max-height: 128px
+    max-height: 128px;
+}
+
+.max-w-80 {
+    max-width: 20rem;
+}
+
+.size-4\! {
+    width: 16px !important;
+    height: 16px !important;
 }
