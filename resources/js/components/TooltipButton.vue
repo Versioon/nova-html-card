@@ -1,8 +1,8 @@
 <template>
     <button
-        v-tooltip="{ content: content, html: true, popperClass: 'max-w-80' }"
+        v-tooltip="{ content: content, html: true, popperClass: 'nova-html-card-tooltip-popper' }"
         type="button"
-        class="group inline-flex items-center cursor-help focus:outline-none"
+        class="nova-html-card-tooltip-button"
         :aria-label="__('More information')"
     >
         <svg
@@ -11,7 +11,7 @@
             height="16"
             fill="none"
             viewBox="0 0 16 16"
-            class="text-slate-800 dark:text-white opacity-30 transition-opacity group-hover:opacity-50 group-focus-visible:opacity-50 size-4!"
+            class="nova-html-card-tooltip-icon"
         >
             <path
                 fill="currentColor"
@@ -31,3 +31,42 @@ export default {
     },
 };
 </script>
+
+<style scoped>
+.nova-html-card-tooltip-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    cursor: help;
+}
+
+.nova-html-card-tooltip-button:focus {
+    outline: none;
+}
+
+.nova-html-card-tooltip-icon {
+    width: 16px !important;
+    height: 16px !important;
+    color: rgb(30 41 59); /* slate-800 */
+    opacity: 0.3;
+    transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nova-html-card-tooltip-button:hover .nova-html-card-tooltip-icon,
+.nova-html-card-tooltip-button:focus-visible .nova-html-card-tooltip-icon {
+    opacity: 0.5;
+}
+
+.dark .nova-html-card-tooltip-icon {
+    color: rgb(255 255 255);
+}
+</style>
+
+<style>
+/* Tooltip popover is teleported outside the component, so this must be unscoped. */
+.nova-html-card-tooltip-popper {
+    max-width: 20rem;
+}
+</style>
