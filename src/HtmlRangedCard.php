@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Abordage\HtmlCard;
+namespace Versioon\HtmlCard;
 
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Metrics\RangedMetric;
@@ -18,7 +18,7 @@ class HtmlRangedCard extends RangedMetric
 
     public function __construct()
     {
-        parent::__construct('abordage-html-ranged-card');
+        parent::__construct('versioon-html-ranged-card');
     }
 
     public function calculate(NovaRequest $request): string

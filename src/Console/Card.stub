@@ -2,7 +2,7 @@
 
 namespace {{ namespace }};
 
-use Abordage\HtmlCard\HtmlCard;
+use Versioon\HtmlCard\HtmlCard;
 
 class {{ class }} extends HtmlCard
 {

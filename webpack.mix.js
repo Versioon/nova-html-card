@@ -7,4 +7,4 @@ mix
   .js('resources/js/card.js', 'js')
   .css('resources/css/card.css', 'css')
   .vue({ version: 3 })
-  .nova('abordage/html-card')
+  .nova('versioon/html-card')

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Abordage\HtmlCard;
+namespace Versioon\HtmlCard;
 
 use Laravel\Nova\Card;
 
@@ -17,7 +17,7 @@ class HtmlCard extends Card
 
     public function __construct()
     {
-        parent::__construct('abordage-html-card');
+        parent::__construct('versioon-html-card');
         if (request()->is('nova-api/metrics/*')) {
             return;
         }

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Abordage\HtmlCard;
+namespace Versioon\HtmlCard;
 
-use Abordage\HtmlCard\Console\CardCommand;
+use Versioon\HtmlCard\Console\CardCommand;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
@@ -19,8 +19,8 @@ class CardServiceProvider extends ServiceProvider
     public function boot()
     {
         Nova::serving(function (ServingNova $event) {
-            Nova::script('abordage-html-card', __DIR__ . '/../dist/js/card.js');
-            Nova::style('abordage-html-card', __DIR__ . '/../dist/css/card.css');
+            Nova::script('versioon-html-card', __DIR__ . '/../dist/js/card.js');
+            Nova::style('versioon-html-card', __DIR__ . '/../dist/css/card.css');
         });
 
         if ($this->app->runningInConsole()) {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Abordage\HtmlCard\Console;
+namespace Versioon\HtmlCard\Console;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;

@@ -44,7 +44,7 @@ A Laravel Nova card that displays any html content, e.g. lists, notifications, s
 You can install the package via composer:
 
 ```bash
-composer require abordage/nova-html-card
+composer require versioon/nova-html-card
 ```
 
 ## Usage
@@ -62,7 +62,7 @@ you're ready to customize it:
 
 namespace App\Nova\Cards;
 
-use Abordage\HtmlCard\HtmlCard;
+use Versioon\HtmlCard\HtmlCard;
 
 class MyHtmlCard extends HtmlCard
 {
