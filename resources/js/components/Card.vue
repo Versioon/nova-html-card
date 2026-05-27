@@ -8,9 +8,9 @@
 
             <button
                 v-if="card.tooltip"
-                v-tooltip="{ content: card.tooltip, html: true, popperClass: 'max-w-80' }"
+                v-tooltip="{ content: card.tooltip, html: true }"
                 type="button"
-                class="group inline-flex items-center cursor-help focus:outline-none opacity-30 hover:opacity-50"
+                class="group inline-flex items-center cursor-help focus:outline-none"
                 :aria-label="__('More information')"
             >
                 <svg
@@ -19,7 +19,7 @@
                     height="16"
                     fill="none"
                     viewBox="0 0 16 16"
-                    class="text-slate-800 dark:text-white !size-4"
+                    class="text-slate-800 dark:text-white opacity-30 transition-opacity group-hover:opacity-50 group-focus-visible:opacity-50"
                 >
                     <path
                         fill="currentColor"
