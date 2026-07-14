@@ -1,0 +1,22 @@
+dist/js/card.js
+  s_de4b64ac2981cf::t_608ef1541707da 2
+resources/js/components/RangedCard.vue
+  s_de4b64ac2981cf::t_db2625ca22cfcb 79-82
+  s_de4b64ac2981cf::t_cbbc9258b0ad4c 14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "4ad9420c89ea410b979a899053af91f763ab1502",
+  "prompts": {},
+  "sessions": {
+    "s_de4b64ac2981cf": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "859ecc59-3d85-48ac-bbf9-1d61b6dab87e",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Tarvo Reinpalu <tarvo@versioon.ee>"
+    }
+  }
+}
