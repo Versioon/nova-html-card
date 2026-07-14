@@ -11,6 +11,7 @@
             <SelectControl
                 v-if="card.ranges.length > 0"
                 :value="selectedRangeKey"
+                :model-value="selectedRangeKey"
                 @update:modelValue="handleRangeSelected"
                 :options="card.ranges"
                 size="xxs"
@@ -75,6 +76,10 @@ export default {
 
     methods: {
         handleRangeSelected(key) {
+            if (key === this.selectedRangeKey) {
+                return;
+            }
+
             this.selectedRangeKey = key;
             this.fetch();
         },
