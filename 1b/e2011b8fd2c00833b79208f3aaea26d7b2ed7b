@@ -1,0 +1,16 @@
+dist/js/card.js
+  h_525cf90f714c49 2
+dist/js/card.js.LICENSE.txt
+  h_525cf90f714c49 7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "1be2011b8fd2c00833b79208f3aaea26d7b2ed7b",
+  "prompts": {},
+  "humans": {
+    "h_525cf90f714c49": {
+      "author": "Tarvo Reinpalu <tarvo@versioon.ee>"
+    }
+  }
+}
